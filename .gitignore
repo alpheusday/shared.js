@@ -1,0 +1,6 @@
+# Caches
+__MACOSX/
+.DS_Store
+
+# Modules
+node_modules/

@@ -1,0 +1,41 @@
+{
+    "name": "@apst/biome",
+    "version": "0.1.0",
+    "description": "A shareable Biome configuration",
+    "keywords": [
+        "biomejs",
+        "biome",
+        "configuration",
+        "config",
+        "ts",
+        "TypeScript",
+        "js",
+        "JavaScript"
+    ],
+    "homepage": "https://github.com/alpheustangs/shared.js",
+    "bugs": "https://github.com/alpheustangs/shared.js/issues",
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "files": ["biome.jsonc"],
+    "type": "module",
+    "main": "./biome.jsonc",
+    "exports": {
+        ".": "./biome.jsonc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheustangs/shared.js.git",
+        "directory": "packages/biome"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.9.0"
+    },
+    "peerDependencies": {
+        "@biomejs/biome": ">=1.9.0"
+    },
+    "peerDependenciesMeta": {
+        "@biomejs/biome": {
+            "optional": true
+        }
+    }
+}
