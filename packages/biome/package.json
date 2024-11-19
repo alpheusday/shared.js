@@ -14,19 +14,19 @@
     ],
     "homepage": "https://github.com/alpheustangs/shared.js",
     "bugs": "https://github.com/alpheustangs/shared.js/issues",
-    "license": "MIT",
-    "author": "Alpheus Tang",
-    "files": ["biome.jsonc"],
-    "type": "module",
-    "main": "./biome.jsonc",
-    "exports": {
-        ".": "./biome.jsonc"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/alpheustangs/shared.js.git",
         "directory": "packages/biome"
     },
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "type": "module",
+    "exports": {
+        ".": "./biome.jsonc"
+    },
+    "main": "./biome.jsonc",
+    "files": ["biome.jsonc"],
     "devDependencies": {
         "@biomejs/biome": "1.9.0"
     },

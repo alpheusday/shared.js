@@ -13,20 +13,20 @@
     ],
     "homepage": "https://github.com/alpheustangs/shared.js",
     "bugs": "https://github.com/alpheustangs/shared.js/issues",
-    "license": "MIT",
-    "author": "Alpheus Tang",
-    "files": ["tsconfig.json", "tsconfig.lib.json"],
-    "type": "module",
-    "main": "./tsconfig.json",
-    "exports": {
-        ".": "./tsconfig.json",
-        "./lib": "./tsconfig.lib.json"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/alpheustangs/shared.js.git",
         "directory": "packages/tsconfig"
     },
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "type": "module",
+    "exports": {
+        ".": "./tsconfig.json",
+        "./lib": "./tsconfig.lib.json"
+    },
+    "main": "./tsconfig.json",
+    "files": ["tsconfig.json", "tsconfig.lib.json"],
     "peerDependencies": {
         "typescript": ">=5"
     },
