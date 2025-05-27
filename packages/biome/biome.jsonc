@@ -7,6 +7,7 @@
             "./**/.DS_Store",
             "./**/node_modules/**/*",
             "./**/dist/**/*",
+            "./**/.expo/**/*",
             "./**/.next/**/*",
             "./pnpm-lock.yaml"
         ],
@@ -96,6 +97,20 @@
         "parser": {
             "cssModules": true
         },
+        "formatter": {
+            "enabled": true,
+            "indentStyle": "space",
+            "indentWidth": 4,
+            "lineEnding": "lf",
+            "lineWidth": 80,
+            "quoteStyle": "double"
+        },
+        "linter": {
+            "enabled": true
+        }
+    },
+    /* GraphQL */
+    "graphql": {
         "formatter": {
             "enabled": true,
             "indentStyle": "space",
