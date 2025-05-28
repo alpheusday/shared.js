@@ -11,11 +11,11 @@
         "js",
         "javascript"
     ],
-    "homepage": "https://github.com/alpheus-day/shared.js",
-    "bugs": "https://github.com/alpheus-day/shared.js/issues",
+    "homepage": "https://github.com/alpheusday/shared.js",
+    "bugs": "https://github.com/alpheusday/shared.js/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alpheus-day/shared.js.git",
+        "url": "https://github.com/alpheusday/shared.js.git",
         "directory": "packages/tsconfig"
     },
     "license": "MIT",
