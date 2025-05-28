@@ -23,7 +23,8 @@
     "author": "Alpheus Tang",
     "type": "module",
     "exports": {
-        ".": "./biome.jsonc"
+        ".": "./biome.jsonc",
+        "./package.json": "./package.json"
     },
     "main": "./biome.jsonc",
     "files": ["biome.jsonc"],

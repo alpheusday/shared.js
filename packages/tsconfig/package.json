@@ -23,7 +23,8 @@
     "type": "module",
     "exports": {
         ".": "./tsconfig.json",
-        "./lib": "./tsconfig.lib.json"
+        "./lib": "./tsconfig.lib.json",
+        "./package.json": "./package.json"
     },
     "main": "./tsconfig.json",
     "files": ["tsconfig.json", "tsconfig.lib.json"],
