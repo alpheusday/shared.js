@@ -1,3 +1,9 @@
+## 0.1.3 (2025-05-28)
+
+### What's Changed
+
+- Update `package.json`
+
 ## 0.1.2 (2025-05-28)
 
 ### What's Changed
