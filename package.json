@@ -1,9 +1,5 @@
 {
     "private": true,
-    "scripts": {
-        "fmt": "biome check --write .",
-        "": ""
-    },
     "devDependencies": {
         "@biomejs/biome": "^1.9.4"
     }
