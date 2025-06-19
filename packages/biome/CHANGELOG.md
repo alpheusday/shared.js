@@ -1,5 +1,7 @@
 ## 0.3.0 (2025-06-19)
 
+### What's Changed
+
 - Require `@biomejs/biome@^2.0.0`
 
 ## 0.2.2 (2025-05-28)
