@@ -1,57 +1,175 @@
 {
     "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "root": true,
     "files": {
-        "ignore": [
-            "./.git/**/*",
-            "./**/__MACOSX/**/*",
-            "./**/.DS_Store",
-            "./**/node_modules/**/*",
-            "./**/dist/**/*",
-            "./**/.expo/**/*",
-            "./**/.next/**/*",
-            "./pnpm-lock.yaml"
+        "includes": [
+            "**",
+            // git
+            "!.git/**/*",
+            // mac
+            "!**/__MACOSX/**/*",
+            "!**/.DS_Store",
+            // module
+            "!**/node_modules/**/*",
+            // build
+            "!**/.panda/**/*",
+            "!**/.next/**/*",
+            "!**/.expo/**/*",
+            "!**/.vercel/**/*",
+            "!**/dist/**/*",
+            "!build/**/*",
+            "!app/build/**/*",
+            "!web/build/**/*",
+            "!out/**/*",
+            "!app/out/**/*",
+            "!web/out/**/*",
+            // lock
+            "!package-lock.json",
+            "!pnpm-lock.yaml"
         ],
-        "ignoreUnknown": true
+        "ignoreUnknown": true,
+        "maxSize": 1048576 // 1MiB
     },
     "vcs": {
         "enabled": true,
         "clientKind": "git",
         "useIgnoreFile": true,
+        "root": ".",
         "defaultBranch": "main"
     },
     "linter": {
         "enabled": true,
+        "includes": [
+            "**"
+        ],
         "rules": {
             "recommended": true,
             "correctness": {
+                // return void 0
                 "noVoidTypeReturn": "off"
             },
             "security": {
+                // dangerouslySetInnerHTML={{ __html: '' }}
                 "noDangerouslySetInnerHtml": "off"
             },
             "style": {
+                // let a: number = 0;
                 "noInferrableTypes": "off"
             },
             "suspicious": {
+                // let a: any;
                 "noExplicitAny": "off"
             }
         }
     },
     "formatter": {
         "enabled": true,
+        "includes": [
+            "**"
+        ],
         "formatWithErrors": false,
         "indentStyle": "space",
         "indentWidth": 4,
         "lineEnding": "lf",
-        "lineWidth": 80
+        "lineWidth": 80,
+        "attributePosition": "multiline",
+        "bracketSameLine": false,
+        "bracketSpacing": true,
+        "expand": "always",
+        "useEditorconfig": false
     },
-    "organizeImports": {
-        "enabled": true
+    "assist": {
+        "actions": {
+            "source": {
+                // JS import sort
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "groups": [
+                            // stnadard types
+                            {
+                                "type": true,
+                                "source": ":BUN:"
+                            },
+                            {
+                                "type": true,
+                                "source": ":NODE:"
+                            },
+                            ":BLANK_LINE:",
+                            // external types
+                            {
+                                "type": true,
+                                "source": ":URL:"
+                            },
+                            {
+                                "type": true,
+                                "source": ":PACKAGE_WITH_PROTOCOL:"
+                            },
+                            {
+                                "type": true,
+                                "source": ":PACKAGE:"
+                            },
+                            ":BLANK_LINE:",
+                            // local types
+                            {
+                                "type": true,
+                                "source": ":ALIAS:"
+                            },
+                            {
+                                "type": true,
+                                "source": ":PATH:"
+                            },
+                            ":BLANK_LINE:",
+                            // standard
+                            {
+                                "type": false,
+                                "source": ":BUN:"
+                            },
+                            {
+                                "type": false,
+                                "source": ":NODE:"
+                            },
+                            ":BLANK_LINE:",
+                            // external
+                            {
+                                "type": false,
+                                "source": ":URL:"
+                            },
+                            {
+                                "type": false,
+                                "source": ":PACKAGE_WITH_PROTOCOL:"
+                            },
+                            {
+                                "type": false,
+                                "source": ":PACKAGE:"
+                            },
+                            ":BLANK_LINE:",
+                            // local
+                            {
+                                "type": false,
+                                "source": ":ALIAS:"
+                            },
+                            {
+                                "type": false,
+                                "source": ":PATH:"
+                            }
+                        ]
+                    }
+                },
+                // JSX sort in natural order
+                "useSortedAttributes": "off",
+                // JSON sort in natural order
+                "useSortedKeys": "off",
+                // CSS sort
+                "useSortedProperties": "on"
+            }
+        }
     },
-    /* JavaScript/TypeScript */
+    // JavaScript/TypeScript
     "javascript": {
         "parser": {
-            "unsafeParameterDecoratorsEnabled": true
+            "unsafeParameterDecoratorsEnabled": true,
+            "jsxEverywhere": false
         },
         "formatter": {
             "quoteStyle": "double",
@@ -65,16 +183,20 @@
             "indentWidth": 4,
             "lineEnding": "lf",
             "lineWidth": 80,
+            "attributePosition": "multiline",
             "bracketSameLine": false,
             "bracketSpacing": true,
-            "attributePosition": "multiline"
+            "expand": "always"
         },
         "jsxRuntime": "transparent",
         "linter": {
             "enabled": true
+        },
+        "assist": {
+            "enabled": true
         }
     },
-    /* JSON */
+    // JSON
     "json": {
         "parser": {
             "allowComments": false,
@@ -86,13 +208,18 @@
             "indentWidth": 4,
             "lineEnding": "lf",
             "lineWidth": 80,
-            "trailingCommas": "none"
+            "trailingCommas": "none",
+            "bracketSpacing": true,
+            "expand": "always"
         },
         "linter": {
             "enabled": true
+        },
+        "assist": {
+            "enabled": true
         }
     },
-    /* CSS */
+    // CSS
     "css": {
         "parser": {
             "cssModules": true
@@ -107,9 +234,12 @@
         },
         "linter": {
             "enabled": true
+        },
+        "assist": {
+            "enabled": true
         }
     },
-    /* GraphQL */
+    // GraphQL
     "graphql": {
         "formatter": {
             "enabled": true,
@@ -117,16 +247,23 @@
             "indentWidth": 4,
             "lineEnding": "lf",
             "lineWidth": 80,
-            "quoteStyle": "double"
+            "quoteStyle": "double",
+            "bracketSpacing": true
         },
         "linter": {
+            "enabled": true
+        },
+        "assist": {
             "enabled": true
         }
     },
     "overrides": [
-        /* tsconfig.json */
+        // tsconfig.json
         {
-            "include": ["./**/tsconfig.*.json", "./**/tsconfig.json"],
+            "includes": [
+                "**/tsconfig.*.json",
+                "**/tsconfig.json"
+            ],
             "json": {
                 "parser": {
                     "allowComments": true,
@@ -138,9 +275,14 @@
                     "indentWidth": 4,
                     "lineEnding": "lf",
                     "lineWidth": 80,
-                    "trailingCommas": "none"
+                    "trailingCommas": "none",
+                    "bracketSpacing": true,
+                    "expand": "always"
                 },
                 "linter": {
+                    "enabled": true
+                },
+                "assist": {
                     "enabled": true
                 }
             }

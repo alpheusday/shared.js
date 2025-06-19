@@ -1,6 +1,6 @@
 {
     "name": "@apst/biome",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "A shareable Biome configuration",
     "keywords": [
         "biomejs",
@@ -27,12 +27,14 @@
         "./package.json": "./package.json"
     },
     "main": "./biome.jsonc",
-    "files": ["biome.jsonc"],
+    "files": [
+        "biome.jsonc"
+    ],
     "devDependencies": {
-        "@biomejs/biome": "1.9.0"
+        "@biomejs/biome": "2.0.0"
     },
     "peerDependencies": {
-        "@biomejs/biome": ">=1.9.0"
+        "@biomejs/biome": "^2.0.0"
     },
     "peerDependenciesMeta": {
         "@biomejs/biome": {

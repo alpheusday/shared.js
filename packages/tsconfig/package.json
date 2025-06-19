@@ -27,7 +27,10 @@
         "./package.json": "./package.json"
     },
     "main": "./tsconfig.json",
-    "files": ["tsconfig.json", "tsconfig.lib.json"],
+    "files": [
+        "tsconfig.json",
+        "tsconfig.lib.json"
+    ],
     "peerDependencies": {
         "typescript": ">=5"
     },

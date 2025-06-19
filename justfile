@@ -4,6 +4,8 @@ set windows-shell := ["powershell"]
 node_bin := "./node_modules/.bin/"
 biome := node_bin + "biome"
 
+biome_config := "./packages/biome/biome.jsonc"
+
 # Default action
 _:
     just lint
@@ -25,7 +27,9 @@ lint:
 
 # Format code
 fmt:
+    node ./scripts/set-root.js {{biome_config}}
     ./{{biome}} check --write .
+    node ./scripts/set-root.js {{biome_config}}
 
 # Clean up
 clean:
