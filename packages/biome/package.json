@@ -20,7 +20,10 @@
         "directory": "packages/biome"
     },
     "license": "MIT",
-    "author": "Alpheus Tang",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
     "type": "module",
     "exports": {
         ".": "./biome.jsonc",
