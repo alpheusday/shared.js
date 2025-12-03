@@ -1,0 +1,47 @@
+{
+    "name": "@apst/oxlint",
+    "version": "0.1.0",
+    "description": "A shareable oxlint configuration",
+    "keywords": [
+        "oxlint",
+        "oxc",
+        "configuration",
+        "config",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/alpheusday/shared.js",
+    "bugs": "https://github.com/alpheusday/shared.js/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheusday/shared.js.git",
+        "directory": "packages/oxlint"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
+    "type": "module",
+    "exports": {
+        ".": "./.oxlintrc.json",
+        "./package.json": "./package.json"
+    },
+    "main": "./.oxlintrc.json",
+    "files": [
+        ".oxlintrc.json"
+    ],
+    "devDependencies": {
+        "oxlint": "1.0.0"
+    },
+    "peerDependencies": {
+        "oxlint": "^1.0.0"
+    },
+    "peerDependenciesMeta": {
+        "oxlint": {
+            "optional": true
+        }
+    }
+}

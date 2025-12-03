@@ -1,0 +1,47 @@
+{
+    "name": "@apst/oxfmt",
+    "version": "0.1.0",
+    "description": "A shareable oxfmt configuration",
+    "keywords": [
+        "oxfmt",
+        "oxc",
+        "configuration",
+        "config",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/alpheusday/shared.js",
+    "bugs": "https://github.com/alpheusday/shared.js/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheusday/shared.js.git",
+        "directory": "packages/oxfmt"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
+    "type": "module",
+    "exports": {
+        ".": "./.oxfmtrc.json",
+        "./package.json": "./package.json"
+    },
+    "main": "./.oxfmtrc.json",
+    "files": [
+        ".oxfmtrc.json"
+    ],
+    "devDependencies": {
+        "oxfmt": "0.16.0"
+    },
+    "peerDependencies": {
+        "oxfmt": "*"
+    },
+    "peerDependenciesMeta": {
+        "oxfmt": {
+            "optional": true
+        }
+    }
+}
