@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
         /* Language and Environment */
-        "target": "ES2015",
+        "target": "es2015",
         "jsx": "preserve",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
 
         /* Modules */
-        "module": "ESNext",
+        "module": "esnext",
         "moduleResolution": "bundler",
         "resolveJsonModule": true,
 
